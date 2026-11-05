@@ -1,0 +1,479 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Maison Épure, une expérience gastronomique contemporaine. Site de démonstration.">
+  <title>Maison Épure — L'art de savourer l'instant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="header" id="header">
+    <nav class="navigation" aria-label="Navigation principale">
+
+      <a href="#accueil" class="logo">MAISON ÉPURE<span>.</span></a>
+
+      <div class="liens" id="liens-navigation">
+        <a href="#accueil">Accueil</a>
+        <a href="#histoire">Notre histoire</a>
+        <a href="#carte">La carte</a>
+        <a href="#univers">Notre univers</a>
+        <a href="#reservation" class="lien-reservation-mobile">Réserver une table</a>
+      </div>
+
+      <a href="#reservation" class="bouton-reservation">
+        RÉSERVER UNE TABLE
+      </a>
+
+      <button
+        class="menu-mobile"
+        type="button"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+        aria-controls="liens-navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ACCUEIL IMMERSIF -->
+    <section class="hero" id="accueil">
+      <div class="hero-contenu">
+        <p class="sous-titre">MAISON ÉPURE — GASTRONOMIE CONTEMPORAINE</p>
+        <h1>L'art de savourer <em>l'instant.</em></h1>
+        <p>
+          Une cuisine d'émotion, un lieu d'exception,
+          des instants qui restent.
+        </p>
+        <a href="#histoire" class="bouton">
+          DÉCOUVRIR NOTRE MAISON
+        </a>
+      </div>
+
+      <a href="#histoire" class="defilement">
+        <span>DÉFILER POUR EXPLORER</span>
+        <span>↓</span>
+      </a>
+    </section>
+
+    <!-- BANDEAU ÉDITORIAL -->
+    <section class="bandeau-signature">
+      <p>LE GOÛT DE L'ESSENTIEL</p>
+      <span>✦</span>
+      <p>L'ÉLÉGANCE DU DÉTAIL</p>
+      <span>✦</span>
+      <p>L'ÉMOTION À TABLE</p>
+    </section>
+
+    <!-- NOTRE HISTOIRE : COMPOSITION ASYMÉTRIQUE -->
+    <section class="histoire-editoriale" id="histoire">
+
+      <div class="histoire-visuel reveal">
+        <img
+          src="images/restaurant.jpg"
+          alt="Intérieur élégant d'un restaurant gastronomique"
+          loading="lazy">
+
+        <span class="numero-section">01 / NOTRE MAISON</span>
+      </div>
+
+      <div class="histoire-contenu reveal">
+        <p class="etiquette">BIENVENUE CHEZ MAISON ÉPURE</p>
+
+        <h2>
+          Bien plus qu'un repas.
+          <em>Une émotion.</em>
+        </h2>
+
+        <div class="trait-or"></div>
+
+        <p>
+          Nous croyons que les plus beaux souvenirs
+          naissent autour d'une table.
+        </p>
+
+        <p>
+          Notre cuisine célèbre les saisons,
+          la précision du geste et la beauté
+          des produits dans leur plus simple expression.
+        </p>
+
+        <a href="#carte" class="lien-signature">
+          EXPLORER NOTRE CUISINE <span>↗</span>
+        </a>
+      </div>
+
+      <div class="histoire-detail reveal">
+        <img
+          src="images/detail.jpg"
+          alt="Détail d'une création culinaire"
+          loading="lazy">
+      </div>
+
+    </section>
+
+    <!-- GRANDE CITATION -->
+    <section class="manifeste">
+      <div class="manifeste-contenu reveal">
+        <p class="etiquette">NOTRE PHILOSOPHIE</p>
+        <h2>
+          La véritable élégance
+          <em>ne se raconte pas.</em>
+          Elle se savoure.
+        </h2>
+        <span class="ornement">✦</span>
+      </div>
+    </section>
+
+    <!-- CARTE INTERACTIVE -->
+    <section class="carte-immersive" id="carte">
+
+      <div class="carte-introduction reveal">
+        <span class="numero-section">02 / LA GASTRONOMIE</span>
+        <p class="etiquette">LAISSEZ-VOUS SURPRENDRE</p>
+        <h2>Une carte. <em>Mille émotions.</em></h2>
+        <p>
+          Des créations qui suivent les saisons
+          et racontent notre passion.
+        </p>
+      </div>
+
+      <div class="carte-experience">
+
+        <div class="carte-photographie">
+          <img
+            id="photo-carte"
+            src="images/entrees.jpg"
+            alt="Présentation gastronomique"
+            loading="lazy">
+
+          <div class="carte-photo-legende">
+            <span>MAISON ÉPURE</span>
+            <span>UNE CUISINE D'AUTEUR</span>
+          </div>
+        </div>
+
+        <div class="carte-contenu">
+
+          <div class="onglets-carte" role="tablist" aria-label="Catégories de la carte">
+
+            <button
+              class="onglet actif"
+              type="button"
+              role="tab"
+              id="onglet-entrees"
+              aria-controls="menu-entrees"
+              aria-selected="true"
+              data-categorie="entrees">
+              ENTRÉES
+            </button>
+
+            <button
+              class="onglet"
+              type="button"
+              role="tab"
+              id="onglet-plats"
+              aria-controls="menu-plats"
+              aria-selected="false"
+              data-categorie="plats"
+              tabindex="-1">
+              PLATS
+            </button>
+
+            <button
+              class="onglet"
+              type="button"
+              role="tab"
+              id="onglet-desserts"
+              aria-controls="menu-desserts"
+              aria-selected="false"
+              data-categorie="desserts"
+              tabindex="-1">
+              DESSERTS
+            </button>
+
+          </div>
+
+          <!-- ENTRÉES -->
+          <div class="panneau-carte actif" id="menu-entrees" role="tabpanel" aria-labelledby="onglet-entrees">
+
+            <p class="carte-sous-titre">LES PREMIÈRES ÉMOTIONS</p>
+
+            <div class="ligne-plat">
+              <div>
+                <h3>Saint-Jacques snackées</h3>
+                <p>Céleri, agrumes, huile végétale.</p>
+              </div>
+              <span>24 €</span>
+            </div>
+
+            <div class="ligne-plat">
+              <div>
+                <h3>Foie gras de canard</h3>
+                <p>Figues confites, brioche dorée.</p>
+              </div>
+              <span>26 €</span>
+            </div>
+
+            <div class="ligne-plat">
+              <div>
+                <h3>Betterave en textures</h3>
+                <p>Chèvre frais, noisettes torréfiées.</p>
+              </div>
+              <span>19 €</span>
+            </div>
+
+          </div>
+
+          <!-- PLATS -->
+          <div class="panneau-carte" id="menu-plats" role="tabpanel" aria-labelledby="onglet-plats" hidden>
+
+            <p class="carte-sous-titre">LES SIGNATURES DE LA MAISON</p>
+
+            <div class="ligne-plat">
+              <div>
+                <h3>Filet de bœuf</h3>
+                <p>Pommes fondantes, jus réduit.</p>
+              </div>
+              <span>42 €</span>
+            </div>
+
+            <div class="ligne-plat">
+              <div>
+                <h3>Bar rôti</h3>
+                <p>Risotto crémeux, émulsion citronnée.</p>
+              </div>
+              <span>38 €</span>
+            </div>
+
+            <div class="ligne-plat">
+              <div>
+                <h3>Risotto aux champignons</h3>
+                <p>Parmesan affiné, truffe.</p>
+              </div>
+              <span>29 €</span>
+            </div>
+
+          </div>
+
+          <!-- DESSERTS -->
+          <div class="panneau-carte" id="menu-desserts" role="tabpanel" aria-labelledby="onglet-desserts" hidden>
+
+            <p class="carte-sous-titre">LA DERNIÈRE NOTE</p>
+
+            <div class="ligne-plat">
+              <div>
+                <h3>Chocolat grand cru</h3>
+                <p>Ganache intense, vanille.</p>
+              </div>
+              <span>16 €</span>
+            </div>
+
+            <div class="ligne-plat">
+              <div>
+                <h3>Citron revisité</h3>
+                <p>Meringue légère, sablé breton.</p>
+              </div>
+              <span>15 €</span>
+            </div>
+
+            <div class="ligne-plat">
+              <div>
+                <h3>Poire pochée</h3>
+                <p>Caramel délicat, amandes.</p>
+              </div>
+              <span>15 €</span>
+            </div>
+
+          </div>
+
+          <p class="mention-demo">
+            Carte et tarifs fictifs — Site de démonstration.
+          </p>
+
+          <a href="#reservation" class="lien-signature">
+            RÉSERVER UNE TABLE <span>↗</span>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- GRANDE IMAGE IMMERSIVE -->
+    <section class="pause-visuelle">
+      <div class="pause-visuelle-contenu reveal">
+        <p class="etiquette">L'ART DE RECEVOIR</p>
+        <h2>Chaque détail <em>a son importance.</em></h2>
+      </div>
+    </section>
+
+    <!-- GALERIE ÉDITORIALE -->
+    <section class="univers-editorial" id="univers">
+
+      <div class="univers-intro reveal">
+        <span class="numero-section">03 / NOTRE UNIVERS</span>
+        <p class="etiquette">L'EXPÉRIENCE MAISON ÉPURE</p>
+        <h2>Le goût des <em>belles choses.</em></h2>
+      </div>
+
+      <div class="galerie-editoriale">
+
+        <figure class="galerie-photo galerie-photo-grande reveal">
+          <img
+            src="images/plat1.jpg"
+            alt="Création gastronomique raffinée"
+            loading="lazy">
+          <figcaption>01 — LA CRÉATIVITÉ</figcaption>
+        </figure>
+
+        <figure class="galerie-photo galerie-photo-petite reveal">
+          <img
+            src="images/plat2.jpg"
+            alt="Assiette gastronomique contemporaine"
+            loading="lazy">
+          <figcaption>02 — LE SAVOIR-FAIRE</figcaption>
+        </figure>
+
+        <figure class="galerie-photo galerie-photo-large reveal">
+          <img
+            src="images/plat3.jpg"
+            alt="Dessert gastronomique élégant"
+            loading="lazy">
+          <figcaption>03 — L'ÉMOTION</figcaption>
+        </figure>
+
+      </div>
+    </section>
+
+    <!-- RÉSERVATION -->
+    <section class="reservation-editoriale" id="reservation">
+
+      <div class="reservation-intro reveal">
+        <p class="etiquette">VOTRE PROCHAIN SOUVENIR</p>
+        <h2>La table est <em>à vous.</em></h2>
+        <p>
+          Imaginez votre prochaine expérience gastronomique.
+        </p>
+      </div>
+
+      <form class="formulaire-reservation" id="formulaire-reservation">
+
+        <div class="formulaire-ligne">
+          <div>
+            <label for="nom">NOM COMPLET</label>
+            <input type="text" id="nom" name="nom"
+                   placeholder="Votre nom" required>
+          </div>
+
+          <div>
+            <label for="email">ADRESSE E-MAIL</label>
+            <input type="email" id="email" name="email"
+                   placeholder="Votre e-mail" required>
+          </div>
+        </div>
+
+        <div class="formulaire-ligne">
+          <div>
+            <label for="date">DATE SOUHAITÉE</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+
+          <div>
+            <label for="personnes">CONVIVES</label>
+            <select id="personnes" name="personnes" required>
+              <option value="">Choisir</option>
+              <option value="1">1 personne</option>
+              <option value="2">2 personnes</option>
+              <option value="3">3 personnes</option>
+              <option value="4">4 personnes</option>
+              <option value="5">5 personnes</option>
+              <option value="6">6 personnes</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="formulaire-ligne">
+          <div>
+            <label for="heure">HEURE</label>
+            <select id="heure" name="heure" required>
+              <option value="">Choisir</option>
+              <option value="19:00">19h00</option>
+              <option value="19:30">19h30</option>
+              <option value="20:00">20h00</option>
+              <option value="20:30">20h30</option>
+              <option value="21:00">21h00</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="telephone">TÉLÉPHONE</label>
+            <input type="tel" id="telephone" name="telephone"
+                   placeholder="Votre numéro">
+          </div>
+        </div>
+
+        <button type="submit" class="bouton">
+          DEMANDER UNE RÉSERVATION
+        </button>
+
+        <p class="message-formulaire" aria-live="polite"></p>
+
+        <p class="mention-demo">
+          Démonstration uniquement — aucune réservation réelle.
+        </p>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <!-- FINAL : BRIGADE ET INFORMATIONS -->
+  <section class="final-brigade" aria-labelledby="titre-brigade">
+    <div class="final-brigade-contenu">
+      <p class="etiquette">L’ART DE RECEVOIR</p>
+      <h2 id="titre-brigade">Notre brigade <em>vous attend.</em></h2>
+      <p>Derrière chaque assiette, une équipe passionnée. Il ne manque plus que vous.</p>
+      <a href="#reservation" class="bouton">RÉSERVER UNE TABLE</a>
+    </div>
+  </section>
+
+  <footer class="footer-editorial">
+    <div class="footer-principal">
+      <div class="footer-presentation">
+        <p class="footer-titre">NOTRE MAISON</p>
+        <p>Une cuisine d'émotion, des instants qui restent.</p>
+      </div>
+      <div class="footer-navigation">
+        <a href="#accueil">Accueil</a>
+        <a href="#histoire">Notre histoire</a>
+        <a href="#carte">La carte</a>
+        <a href="#univers">Notre univers</a>
+        <a href="#reservation">Réservation</a>
+      </div>
+      <div class="footer-horaires">
+        <p>HORAIRES FICTIFS</p>
+        <span>Mardi – Samedi</span>
+        <span>19h00 – 22h00</span>
+      </div>
+    </div>
+    <div class="footer-bas footer-bas-simple">
+      <span class="footer-nom">MAISON ÉPURE<span class="point-or">.</span></span>
+      <p>© 2026 — Concept fictif de démonstration.</p>
+      <a href="#accueil">RETOUR EN HAUT ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
